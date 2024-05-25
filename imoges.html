@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .click {
+      background-color: greenyellow;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      font-family: arial;
+      align-items: center;
+      text-align: center;
+      font-size: 2rem;
+      justify-content: center;
+      border-radius: 20px;
+    }
+  </style>
+  <body class="body">
+    <button class="click">click me 🤗</button>
+    <script>
+      const click = document.querySelector(".click");
+      const body=document.querySelector('body')
+      click.addEventListener("click", (e) => {
+        e.target.style.backgroundColor = "red";
+        e.target.textContent = "i am  sad😔";
+      });
+      click.addEventListener("mouseover", (e) => {
+        e.target.style.backgroundColor = "yellow";
+        e.target.textContent = "ouch! 🤕";
+      });
+      click.addEventListener("mouseout", (e) => {
+        e.target.style.backgroundColor = "blue";
+        e.target.textContent = "freedom 😝";
+      });
+      click.addEventListener("input", (e) => {
+        e.target.style.backgroundColor = "pink";
+        e.target.textContent = "give some input✌️";
+      });
+      body.addEventListener('click',(e)=>{
+        e.target.style.backgroundColor='green'
+      })
+    </script>
+  </body>
+</html>
